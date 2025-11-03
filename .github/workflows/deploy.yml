@@ -22,12 +22,12 @@ jobs:
       - name: Restore dependencies
         working-directory: ./dotnet/MyApp
         run: dotnet restore
-
         
-
       - name: Build
-        run: dotnet publish -c Release -o ./publish
+        working-directory: ./dotnet/MyApp
+        run: dotnet build --configuration Release --no-restore
 
+      
       - name: Deploy to Elastic Beanstalk
         uses: einaregilsson/beanstalk-deploy@v22
         with:
