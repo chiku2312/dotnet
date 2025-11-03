@@ -24,7 +24,8 @@ jobs:
 
         
       - name: Build
-        run:  tutorials/scalable-razor-apps/start/ScalableRazor.csproj
+      - run: dotnet build tutorials/scalable-razor-apps/start/ScalableRazor.csproj --configuration Release
+
         
       - name: Deploy to Elastic Beanstalk
         uses: einaregilsson/beanstalk-deploy@v22
