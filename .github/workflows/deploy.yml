@@ -20,11 +20,11 @@ jobs:
           dotnet-version: '8.0.x'
 
       - name: Restore dependencies
-        run: dotnet restore tutorials/scalable-razor-apps/start/ScalableRazor.csproj
+        run:  dotnet restore tutorials/scalable-razor-apps/start/ScalableRazor.csproj
 
         
       - name: Build
-      - run: dotnet build tutorials/scalable-razor-apps/start/ScalableRazor.csproj --configuration Release
+      - run:  dotnet build tutorials/scalable-razor-apps/start/ScalableRazor.csproj --configuration Release
 
         
       - name: Deploy to Elastic Beanstalk
